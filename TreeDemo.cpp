@@ -23,10 +23,10 @@ int main() {
     ariel::Tree threetree;
     threetree.insert(5);
     threetree.insert(2);
-  //  threetree.insert(3);
+    threetree.remove(5);
   //  threetree.insert(4);
     //threetree.insert(9);
-    threetree.~Tree();
+  //  threetree.~Tree();
     //cout << "threetree: " << threetree.right(5)<< endl << " ";
     // threetree.root();
     cout << "threetree: size=" << threetree.size() << " root=" << threetree.root() << endl << "   ";  // size=3, root=5.

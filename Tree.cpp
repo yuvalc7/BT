@@ -20,22 +20,17 @@ Tree::Tree(){
   _size = 0;
 }
 
-Tree::~Tree(){
-  destroytree(_root);
-}
-void Tree::destroytree(Node *ptr){
-  // if(ptr == nullptr){return;}
-  // else{Node * tmp = _root;
-  // Node *p = nullptr;
-  // while(tmp->left != nullptr){
-  //   p = tmp;
-  //   tmp = tmp->left;
-  //   }
-  //   delete tmp;
-  //   tmp= nullptr;
-  //   if(p!=nullptr){destroytree(p);}
-  // }
-}
+// Tree::~Tree(){
+//   destroytree(_root);
+// }
+// void Tree::destroytree(Node *ptr){
+//     if (ptr == NULL) {
+// 	return;
+// 	}
+// 	destroytree(ptr->left);
+// 	destroytree(ptr->right);
+// delete ptr;
+// }
 void Tree::print(){
   print(_root);
   std::cout << "\n";

@@ -14,7 +14,7 @@ class Tree{
 
 public:
 	Tree();
-	~Tree();
+//	~Tree();
 
 	Tree& insert(int data);
 	int size();
@@ -35,7 +35,7 @@ private:
 	void insert(int data, Node* t);
 	void remove(int data, Node* t);
 	void print(Node* t);
-  void destroytree(Node*t);
+  //void destroytree(Node*t);
 
 	Node* _root;
 	int _size;
