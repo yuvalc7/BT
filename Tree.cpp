@@ -242,13 +242,13 @@ else{
                   tmp=tmp->left;}
             tmp->left = current->left;
 }
-else{
-  pre->left=current->right;
-      Node *tmp = current->right;
-        while(tmp->left != nullptr){
-              tmp=tmp->left;}
-        tmp->left = current->left;
-}
+// else{
+//   pre->left=current->right;
+//       Node *tmp = current->right;
+//         while(tmp->left != nullptr){
+//               tmp=tmp->left;}
+//         tmp->left = current->left;
+// }
           delete current;
           current = nullptr;
           _size--;
