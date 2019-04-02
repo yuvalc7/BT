@@ -156,7 +156,7 @@ else{
     }
 }
   if(current->left ==nullptr && current->right==nullptr){
-    if(_size == 1){delete current ; current = nullptr;}//delete _root ; _root = nullptr;
+    if(_size == 1){delete _root ; _root = nullptr;delete current ; current = nullptr;}
     else{
       if(pre->left ==current){pre->left=nullptr;}
       else{pre->right=nullptr;}
@@ -242,13 +242,13 @@ else{
                   tmp=tmp->left;}
             tmp->left = current->left;
 }
-// else{
-//   pre->left=current->right;
-//       Node *tmp = current->right;
-//         while(tmp->left != nullptr){
-//               tmp=tmp->left;}
-//         tmp->left = current->left;
-// }
+else{
+  pre->left=current->right;
+      Node *tmp = current->right;
+        while(tmp->left != nullptr){
+              tmp=tmp->left;}
+        tmp->left = current->left;
+}
           delete current;
           current = nullptr;
           _size--;
