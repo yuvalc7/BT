@@ -156,7 +156,12 @@ else{
     }
 }
   if(current->left ==nullptr && current->right==nullptr){
-    if(_size == 1){delete _root ; _root = nullptr;delete current ; current = nullptr;}
+    if(_size == 1){
+	    delete _root;
+	    _root = nullptr;
+	//    delete current; 
+	    current = nullptr;
+    }
     else{
       if(pre->left ==current){pre->left=nullptr;}
       else{pre->right=nullptr;}
