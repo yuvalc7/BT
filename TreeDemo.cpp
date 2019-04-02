@@ -23,11 +23,18 @@ int main() {
     ariel::Tree threetree;
     threetree.insert(5);
     threetree.insert(2);
-    threetree.remove(5);
-  //  threetree.insert(4);
-    //threetree.insert(9);
+
+    threetree.insert(4);
+    threetree.insert(9);
+    threetree.insert(11);
+    threetree.insert(10);
+    //threetree.insert(11);
+    threetree.insert(1);
+    threetree.insert(8);
+     threetree.remove(2);
   //  threetree.~Tree();
-    //cout << "threetree: " << threetree.right(5)<< endl << " ";
+    cout << "threetree: " << threetree.left(5)<< endl << " ";
+      cout << "threetree: " << threetree.right(5)<< endl << " ";
     // threetree.root();
     cout << "threetree: size=" << threetree.size() << " root=" << threetree.root() << endl << "   ";  // size=3, root=5.
     threetree.print();

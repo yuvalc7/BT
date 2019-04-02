@@ -79,6 +79,7 @@ void Tree::insert(int i,Node *t){
 			insert(i, t->right);
 		}else{
 			t->right = new Node(i);
+      t->right->parent = t;
 
 		}
 	}
@@ -155,7 +156,7 @@ else{
     }
 }
   if(current->left ==nullptr && current->right==nullptr){
-    if(_size == 1){delete _root ; _root = nullptr;delete current ; current = nullptr;}
+    if(_size == 1){delete current ; current = nullptr;}//delete _root ; _root = nullptr;
     else{
       if(pre->left ==current){pre->left=nullptr;}
       else{pre->right=nullptr;}
@@ -234,12 +235,20 @@ else{
       }
     }
   else{
+    if(pre->right==current){
       pre->right=current->right;
           Node *tmp = current->right;
             while(tmp->left != nullptr){
                   tmp=tmp->left;}
             tmp->left = current->left;
-
+}
+else{
+  pre->left=current->right;
+      Node *tmp = current->right;
+        while(tmp->left != nullptr){
+              tmp=tmp->left;}
+        tmp->left = current->left;
+}
           delete current;
           current = nullptr;
           _size--;
