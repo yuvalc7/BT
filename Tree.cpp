@@ -33,7 +33,7 @@ void Tree::print(Node* t){
 int Tree::size(){
   return _size;
 }
-int Tree::_root(){
+int Tree::root(){
   if(root != nullptr){return root->val;}
   else {throw "dosent exist!";}
 }
