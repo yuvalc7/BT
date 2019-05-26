@@ -25,7 +25,7 @@ namespace ariel{
         int right(int val);
         int left(int val);
         void print();
-        int _root();
+        int root();
         bool contains(int val);
 
         private:
