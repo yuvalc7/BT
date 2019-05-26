@@ -14,7 +14,7 @@ namespace ariel{
 
         public:
         Tree(){
-        root = nullptr;
+        _root = nullptr;
         _size = 0;
         }
         ~Tree(){}
