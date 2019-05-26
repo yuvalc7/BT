@@ -32,7 +32,7 @@ namespace ariel{
         void print(Node *n);
         void insert(Node *n , int v);
         Node* find(Node *n, int v);
-        Node *root;
+        Node* _root;
         int _size;
 
     };
