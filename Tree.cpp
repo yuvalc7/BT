@@ -76,7 +76,7 @@ if(!contains(v)){throw "dosent exist !";}
 Node *ptr = find(_root,v);
 if(ptr->val==_root->val){
         if(_size==1){
-            root=nullptr;
+            _root=nullptr;
              delete(ptr);
               _size--;return false;
               }
@@ -86,7 +86,7 @@ if(ptr->val==_root->val){
                     R = (ptr->right);
                     R->parent = nullptr;
                     delete(ptr);
-                    root = R;
+                    _root = R;
                    _size--;
 
                    }
@@ -115,7 +115,7 @@ if(ptr->val==_root->val){
                 newroot->left = ptr->left;
                 newroot->left->parent = newroot;
                     delete(ptr);
-                    root = newroot;
+                    _root = newroot;
                    _size--;
 
             }
