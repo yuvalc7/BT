@@ -1,43 +1,40 @@
 namespace ariel{
-class Node{
-public:
-	Node(int data);
-	int getData();
+    class Node{
 
-	Node* left;
-  Node* right;
-	Node* parent;
-	int value;
-  };
+        public:
+        Node(int a);
+        int getData();
+        Node*left;
+        Node*right;
+        Node*parent;
+        int val;
+        };
 
-class Tree{
+    class Tree{
 
-public:
-	Tree();
-//	~Tree();
+        public:
+        Tree(){
+        root = nullptr;
+        _size = 0;
+        }
+        ~Tree(){}
+        Tree& insert(int val);
+        bool remove(int val);
+        int size();
+        int parent(int val);
+        int right(int val);
+        int left(int val);
+        void print();
+        int _root();
+        bool contains(int val);
 
-	Tree& insert(int data);
-	int size();
-	void remove(int data);
-	bool contains(int data);
-	int root();
-	int parent(int i);
-	int left(int i);
-	int right(int i);
-	void print();
+        private:
+        void print(Node *n);
+        void insert(Node *n , int v);
+        Node* find(Node *n, int v);
 
-private:
-	Node* contains(int data, Node* t);
-	int parent(int i, Node* t);
-	int left(int i, Node* t);
-	int right(int i, Node* t);
-	int root(Node* t);
-	void insert(int data, Node* t);
-	void remove(int data, Node* t);
-	void print(Node* t);
-  //void destroytree(Node*t);
+        Node *root;
+        int _size;
 
-	Node* _root;
-	int _size;
-};
+    };
 }
