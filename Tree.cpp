@@ -19,7 +19,7 @@ Tree::Tree(){
 }
 */
 void Tree::print(){
-  print(root);
+  print(_root);
   std::cout << "\n";
 }
 void Tree::print(Node* t){
@@ -34,16 +34,16 @@ int Tree::size(){
   return _size;
 }
 int Tree::root(){
-  if(root != nullptr){return root->val;}
+  if(_root != nullptr){return _root->val;}
   else {throw "dosent exist!";}
 }
 bool contains(int data){
   return true;
 }
 Tree& Tree::insert(int v){
-if(root == nullptr){root= new Node(v);_size++;}
+if(_root == nullptr){_root= new Node(v);_size++;}
 else if(contains(v)){throw "exist !";}
-else{insert(root , v );}
+else{insert(_root , v );}
 return *this;
 }
 void Tree::insert(Node *n,int v){
@@ -57,24 +57,24 @@ else{
 }
 int Tree::right(int v){
 if(!contains(v)){throw "dosent exist!";}
-else{Node *ptr = find(root,v);
+else{Node *ptr = find(_root,v);
 return ptr->right->val;}
 }
 int Tree::left(int v){
 if(!contains(v)){throw "dosent exist!";}
-else{Node *ptr = find(root,v);return ptr->left->val;}
+else{Node *ptr = find(_root,v);return ptr->left->val;}
 }
 int Tree::parent(int v){
 if(!contains(v)){throw "dosent exist!";}
-else{Node *ptr = find(root,v);
+else{Node *ptr = find(_root,v);
     if(ptr->parent==nullptr){throw "dosent exist!";}
     return ptr->parent->val;
 }
 }
 bool Tree::remove(int v){
 if(!contains(v)){throw "dosent exist !";}
-Node *ptr = find(root,v);
-if(ptr->val==root->val){
+Node *ptr = find(_root,v);
+if(ptr->val==_root->val){
         if(_size==1){
             root=nullptr;
              delete(ptr);
@@ -95,7 +95,7 @@ if(ptr->val==root->val){
                     R = (ptr->left);
                     R->parent = nullptr;
                     delete(ptr);
-                    root = R;
+                    _root = R;
                    _size--;
                    }
                }
@@ -171,8 +171,8 @@ else{
 }
 bool Tree::contains(int v){
   bool b = false;
-  if(root != nullptr){
-    Node *ptr = find(root,v);
+  if(_root != nullptr){
+    Node *ptr = find(_root,v);
     if(ptr!=nullptr){b=true;}
 }
 return b;
