@@ -183,5 +183,5 @@ if(n==nullptr){return n;}
 else if(n->val==v){return n;}
 else if(n->val<v){n = n->right; find(n,v);}
 else{n=n->left; find(n,v);}
-//return *this;
+return n;
 }
