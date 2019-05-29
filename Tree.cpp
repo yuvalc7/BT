@@ -168,6 +168,7 @@ else{
             }
 
 }
+      return false;
 }
 bool Tree::contains(int v){
   bool b = false;
